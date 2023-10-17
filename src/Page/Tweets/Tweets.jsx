@@ -14,7 +14,7 @@ import { Section } from '../../components/Section/Section';
 import { Container } from '../../components/Container/Container';
 import { Button } from '../../components/Button/Button';
 import { BackLink } from '../../components/BackLink/BackLink';
-import { Loader } from '../../components/Loader/Loader';
+// import { Loader } from '../../components/Loader/Loader';
 
 import { DIV } from './Tweets.styled';
 
@@ -26,15 +26,15 @@ export const Tweets = () => {
   const tweetsPerPage = 3;
   const [isShowButton, setIsShowButton] = useState(true);
 
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [error, setError] = useState(null);
 
   const [storiesToShow, setStoriesToShow] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setIsLoading(true);
+        // setIsLoading(true);
         const fetchedTweets = await fetchTweets(page, tweetsPerPage);
 
         const toShow = fetchedTweets.slice(
@@ -45,9 +45,9 @@ export const Tweets = () => {
 
         setIsShowButton(page < Math.ceil(fetchedTweets.length / tweetsPerPage));
       } catch (error) {
-        setError(error.message);
+        // setError(error.message);
       } finally {
-        setIsLoading(false);
+        // setIsLoading(false);
       }
     };
     fetchData();
@@ -62,8 +62,8 @@ export const Tweets = () => {
 
   return (
     <Section>
-      {/* {isLoading && <Loader />} */}
-      {/* {error && <p style={{color: 'black'}}>Sorry. There are no muvies ... 😭</p>} */}
+      {/* {isLoading && <p>.</p>} 
+       {error && <p style={{color: 'black'}}>Sorry. There are no muvies ... 😭</p>} */}
 
       <Container>
         <DIV>
