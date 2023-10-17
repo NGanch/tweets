@@ -1,4 +1,4 @@
-import { Section } from '../../components/Section/Section';
+// import { Section } from '../../components/Section/Section';
 import { Container } from '../../components/Container/Container';
 
 import { HomeSection, SectionTitle } from './Home.styled';
