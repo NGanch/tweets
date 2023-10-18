@@ -1,18 +1,26 @@
-// import { Section } from '../../components/Section/Section';
+import { Section } from '../../components/Section/Section';
 import { Container } from '../../components/Container/Container';
+import { AvatarList } from '../../components/AvatarList/AvatarList';
 
-import { HomeSection, SectionTitle } from './Home.styled';
+
+import tweets from './popularTweets.json';
+
+import { SectionTitle } from './Home.styled';
 
 export const Home = () => {
+
+  const total = tweets.length;
+  console.log(tweets)
+
+
+
   return (
-    <HomeSection>
-      {/* <Section> */}
-
+    <Section>
       <Container>
-        <SectionTitle>Wellcome</SectionTitle>
-      </Container>
+        <SectionTitle>Popular tweets</SectionTitle>
+        {total > 0 && <AvatarList tweets={tweets} />}
 
-      {/* </Section> */}
-    </HomeSection>
+      </Container>
+    </Section>
   );
 };

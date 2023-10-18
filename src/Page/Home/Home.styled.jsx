@@ -1,12 +1,10 @@
 import styled from 'styled-components';
-import background from '../../image/backgroung.jpg';
+
 export const HomeSection = styled.section`
   // width: 100%;
   margin: 0;
-  // padding-top: 80px;
-  // padding-bottom: 80px;
-
-  background-image: url(${background});
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   background-size: cover;
   background-position: center;
@@ -16,9 +14,8 @@ export const HomeSection = styled.section`
 `;
 
 export const SectionTitle = styled.h1`
-  padding-top: 320px;
-
-  padding-left: 350px;
+  padding-left: 100px;
+  padding-bottom: 100px;
   color: #ebd8ff;
 
   font-family: Montserrat;
